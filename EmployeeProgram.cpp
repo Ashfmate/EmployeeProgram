@@ -1,6 +1,10 @@
 #include <iostream>
+#include "Daddy.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	Daddy d{ "path.txt" };
+	d.save("This string should be in a file");
+	string load = d.load();
+	std::cin.get();
 }
